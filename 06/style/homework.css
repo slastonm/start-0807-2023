@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: lightblue;
+}
+.container{
+    width: 900px;
+    border: 2px solid white;
+    margin: 0 auto;
+}
+nav a{
+    color:white;
+    text-decoration: none;
+}
+.logo{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    background-color: blue;
+    border: 4px solid yellow;
+    top: 50px;
+    left: 150px;
+}
+.diya{
+    background-color: black;
+    left: 10px;
+    top: 150px;
+    position: relative;
+    position: fixed;
+    position: absolute;
+    position: sticky;
+    z-index: 1;
+    
+}
+.diya-circle{
+    top:400px;
+    left: 300px;
+    z-index: 2;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: orange;
+    padding: 20px;
+}
