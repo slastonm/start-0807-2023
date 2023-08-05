@@ -1,17 +1,40 @@
 *{
     box-sizing: border-box;
 }
+:root{
+    --main-color: #333;
+    --mainFontSize: 14px;
+    --body-bg:white;
+    --title-color:red;
+    --title-font-size:20px;
+}
 body{
-    font-size: 14px;
-    color: white;
-    background-color: black;
+    font-size: var(--mainFontSize);
+    color: var(--main-color);
+    background-color: var(--body-bg);
 }
 .title{
-    font-size: 20px;
-    color: red;
+    font-size: var(--title-font-size);
+    color:var(--title-color);
+}
+h2{
+    --title-color: green;
+    color: var(--title-color);
 }
 
 body.light{
     background-color: white;
     color: black;
+}
+@media  (max-width:700px) {
+    :root{
+        --main-color: #f5f5f5;
+        --mainFontSize: 24px;
+        --body-bg:rgb(12, 12, 12);
+        --title-color:rgb(195, 255, 0);
+        --title-font-size:40px;
+    }
+    h2{
+        --title-color: rgb(199, 4, 33);
+    }
 }

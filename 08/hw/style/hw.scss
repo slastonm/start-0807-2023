@@ -1,0 +1,13 @@
+$font-main:'Nunito Sans', sans-serif;
+$decoration-body-line:#F9F9F9;
+body{
+    position: relative;
+    &::before{
+        content: "";
+        display: block;
+        height: 100%;
+        width: 15%;
+        background-color: $decoration-body-line;
+    }
+}
+
