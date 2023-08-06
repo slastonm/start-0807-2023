@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.i-grid{
+    padding: 20px;
+    background-color: gold;
+    display: inline-grid;
+}
+.grid{
+    padding: 20px;
+    background-color: rgb(28, 19, 212);
+    display: grid;
+    grid-template-columns: 100px 150px  400px;  
+    /* grid-template-columns: 10vw 80vw 10vw; */
+    /* grid-template-columns: 50px auto 350px; */
+    /* grid-template-columns: auto auto auto; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* grid-template-columns: repeat(6, 150px 300px); */
+    /* grid-template-columns: minmax(100px, 1fr) minmax(400px, 1fr) 1fr; */
+    grid-template-rows: 170px 180px;
+
+    justify-items: center;
+    /* justify-items: start;
+    justify-items: end; */
+    align-items: center;
+    align-content: center;
+
+}
+.grid-item{
+    background-color: lightgray;
+    padding: 20px;
+    border: 1px solid white;
+
+}
+.grid-item:nth-child(1){
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    justify-self: start;
+    align-self: start;
+}
+.grid-item:nth-child(2){
+    background-color: rgb(233, 10, 118);
+    grid-column-start: -1;
+    grid-column-end: -2;
+    grid-row-start: -1;
+    grid-row-end: -2;
+}
+.grid-item:nth-child(3){
+    justify-self: stretch;
+    align-self: stretch;
+}
+header, aside, section, footer{
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.area-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "left-side right-side"
+    "footer footer";
+}
+header{
+    background-color: green;
+    grid-area: header;
+}
+aside{
+    background-color: orange;
+    grid-area: left-side;
+}
+section{
+    background-color: blueviolet;
+    grid-area: right-side;
+}
+footer{
+    background-color: grey;
+    grid-area: footer;
+}
+@media(max-width:1000px){
+    .area-page{
+        grid-template-areas: 
+        "header ."
+        ". footer"
+        "left-side ."
+        ". right-side";
+    }
+}
+
+@media(max-width:1000px){
+    .grid{
+        grid-template-columns: 400px;  
+    }
+}

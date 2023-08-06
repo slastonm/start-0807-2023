@@ -1,0 +1,134 @@
+$font-main:'Nunito Sans', sans-serif;
+// $decoration-body-line:#F9F9F9;
+$decoration-body-line:#634a4a;
+
+// $decoration-color:#3F9AB7;
+$decoration-color:#0a8b40;
+
+$second-decoration-color: #F2994A;
+$regular-font-weight:400;
+$semi-bold-weight:700;
+$bold-weigth:800;
+$base-font-size:16px;
+body{
+    font-family: $font-main;
+    font-weight: $regular-font-weight;
+    font-size: $base-font-size;
+    position: relative;
+    padding-bottom: 45px;
+    &::before{
+        content: "";
+        display: block;
+        width: 15%;
+        background-color: $decoration-body-line;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 15%;
+    }
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+header{
+    padding: 55px 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.bottom{
+    background: $decoration-color;
+    padding: 32px 0;
+    .clients{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .client-info{
+        color: white;
+        font-size: 20px;
+        font-style: normal;
+        line-height: normal;
+        strong{
+            font-size: 24px;
+        } 
+    }
+    .img-block{
+        width: 55px;
+        height: 55px;
+        overflow: hidden;
+        border-radius: 100px;
+        position: relative;
+        left: -15px;
+        &:nth-child(1){
+            left: 0;
+        }
+        &:nth-child(2){
+            left: -15px;
+        }
+        &:nth-child(3){
+            left: -30px;
+        }
+        &:hover{
+            box-shadow: -3px -3px 5px 7px rgba(255,255,255,0.3);
+        }
+    }
+}
+
+.main-content{
+    padding: 110px 0 51px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .img-block{
+        width: 40%;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .content-block{
+        width: 45%;
+    }
+    .content-block-text{
+        padding-right: 20%;
+        border-right: 1px solid black;
+    }
+}
+
+@media (max-width:1080px){
+    header{
+        padding: 25px;
+        .container{
+            flex-direction: column;
+            row-gap: 15px;
+        }
+    }
+}
+@media (max-width:810px){
+    .main-content{
+        padding: 55px 0 25px;
+        .container{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-block{
+            width: 80%;
+        }
+        .content-block{
+            width: 80%;
+        }
+        .content-block-text{
+            margin-top: 25px;
+            padding-right: 15%;
+            border-right: 1px solid black;
+        }
+    }
+}

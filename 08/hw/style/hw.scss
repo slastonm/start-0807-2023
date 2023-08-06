@@ -5,9 +5,13 @@ body{
     &::before{
         content: "";
         display: block;
-        height: 100%;
         width: 15%;
         background-color: $decoration-body-line;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 15%;
     }
 }
 
