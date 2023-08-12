@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+.btn{
+    padding: 10px 20px;
+    background-color: gray;
+}
+.btn:hover{
+    background-color: yellow;
+}
+.one{
+    transition-delay: 2s;
+}
+.one:hover{
+    transform: skew(0deg, -5deg);
+}
+.second{
+    transition-duration: 5s;
+
+}
+.second:hover{
+    rotate: -45deg;
+    scale: 0.5 0.5;
+}
+.third{
+    width: 100px;
+    color: white;
+    transition: all 2s ease-in;
+    /* transition: width 5s ease-in; */
+}
+.third:hover{
+    width: 200px;
+    color: black;
+    transform: rotate(20deg);
+    transform: scale(1.1, 1.1);
+}
+.move{
+    transition: all 2s ;
+}
+.move:hover{
+    transform: translate(-50px, 0);
+}
+.img-block{
+    width: 20%;
+    margin: 0 auto;
+    border-radius:100%;
+    border: 2px solid red;
+    overflow: hidden;
+}
+.img-block img{
+    width: 100%;
+    height: auto;
+    transition: all 5s linear;
+}
+.img-block img:hover{
+    scale: 1.2 1.2;
+    rotate: 15deg;
+    transform: translate(10px, 10px);
+}
+.icon{
+    background-color: red;
+}
+.test{
+    transition: all 2s linear;
+}
+.test:hover{
+    fill:black;
+    stroke:gold;
+    stroke-width: 4px;
+}
